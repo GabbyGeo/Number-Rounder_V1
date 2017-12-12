@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Round the Number</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<style type="text/css">
+   h1 {
+  font-size: 40px;
+  color: blue;
+  font-family: 'Pacifico', cursive;
+  line-height: 48px;
+  display: inline;
+}
+
+#inputBoxes {
+  color: #737373;
+  line-height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p {
+  padding-top: 10px;
+  font-size: 20px;
+  color: blue;
+}
+
+#display {
+  color: blue;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+    <h1>Number Rounder</h1>
+      <form id="inputBoxes">
+         <label><b>Number to Round:</b></label>
+         <input type="text" name="message" id="user_input1">
+         <label><b>Round to Nearest:</b></label>
+         <input type="text" name="message" id="user_input">
+      </form>
+      <input type="submit" onclick="roundNum();"><br/>
+      <p>Result: <span id='display'></span></p>
+      <script src="js/app.js"></script>
+</body>
+</html>
+
