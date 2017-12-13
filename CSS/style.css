@@ -1,0 +1,25 @@
+h1 {
+  font-size: 40px;
+  color: blue;
+  font-family: 'Pacifico', cursive;
+  line-height: 48px;
+  display: inline;
+}
+
+#inputBoxes {
+  color: #737373;
+  line-height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p {
+  padding-top: 10px;
+  font-size: 20px;
+  color: blue;
+}
+
+#display {
+  color: blue;
+  font-size: 20px;
+}
