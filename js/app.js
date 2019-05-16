@@ -1,19 +1,24 @@
-function roundNum() {
-         		
-         		var num = document.getElementById("user_input1").value;
-         		var round = document.getElementById("user_input").value;
-         		var remainder = Math.round(num/round);
-         
-         		var superResult = round * remainder;
-         
-         			if (remainder == 0) {
-         			superResult = round;
-         		
-         			}
-         
-         			if (num <=0 || round <=0) {
-         				superResult = "Pick a Positive Number";
-         			}
-         
-	       			document.getElementById('display').innerHTML = superResult;
-	    	}
+var app = angular.module("Demo", []);
+app.controller("AppController", function ($scope) {
+  $scope.syntexError = false;
+
+  $scope.Calculate = function () {
+    var result = $scope.result;
+    var result1 = math.round($scope.number1 / $scope.rounder);
+    try {
+      $scope.result = math.eval(result1 * $scope.rounder);
+    } catch (e) {
+      if (e.message.indexOf("Undefined symbol") != -1) {
+        $scope.syntexError = true;
+      }
+      return result;
+    }
+  }
+  $scope.reset = function () {
+    $scope.result = null;
+    $scope.number1 = null;
+    $scope.rounder = null;
+  }
+});
+
+
